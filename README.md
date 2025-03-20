@@ -7,6 +7,8 @@ API Java para estudo de Spring Boot
 ```
 mvn clean package
 ```
+* Configuração do Swagger
+-https://springdoc.org/properties
 ---
 ## Navegação
 ### Executar a API
