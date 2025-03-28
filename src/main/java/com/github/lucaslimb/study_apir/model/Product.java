@@ -1,10 +1,20 @@
 package com.github.lucaslimb.study_apir.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.math.BigDecimal;
 
+@Entity
 public class Product {
+
+    @Id
     private Long id;
+
+
     private String nome;
+
+
     private BigDecimal valor;
     
     public BigDecimal getValor() {
