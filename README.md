@@ -1,8 +1,8 @@
-# Study APIR
+# ☕︎ Study API
 
-API Java para estudo de Spring Boot
+API Java com Spring Boot para estudos
 
-## Instalação
+## 🔧 Instalação
 
 * Limpar e criar a pasta */target*
 
@@ -22,7 +22,7 @@ springdoc.swagger-ui.disable-swagger-default-url=true
 ```
 
 
-## Navegação
+## 🌐 Navegação
 
 ### Executar a API
 
@@ -32,10 +32,10 @@ springdoc.swagger-ui.disable-swagger-default-url=true
 mvn spring-boot:run
 ```
 
-### Documentação da API (Swagger)
+## 📖 Documentação da API (Swagger)
 - http://localhost:8080/swagger-ui.html
 
 
-## Referencias
+## 📓 Referencias
 
 - https://springdoc.org/
