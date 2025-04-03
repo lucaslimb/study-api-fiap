@@ -39,3 +39,8 @@ mvn spring-boot:run
 ## 📓 Referencias
 
 - https://springdoc.org/
+
+## 📚 Descrição de Branches
+|**main**       |**uc-http-codes**  | **uc-service-crud** |
+|----------------|---------|--------|
+|Código completo até o momento	     |Início do conteúdo (código base)| CRUD completo |
