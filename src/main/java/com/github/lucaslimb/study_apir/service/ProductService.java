@@ -20,13 +20,8 @@ public class ProductService {
     @Autowired
     private ProductRepository repository;
 
-    private static final BigDecimal VALOR_PADRAO = new BigDecimal(500);
-
     public Product createProduct(ProductRequestCreate dto){
-        Product product = new Product();
-        product.setNome(dto.getNome());
-        product.setValor(VALOR_PADRAO);
-        return repository.save(product);
+        return repository.save(dto.toModel());
     }
 
     public Optional<Product> getProductById(Long id){
@@ -39,10 +34,7 @@ public class ProductService {
 
     public Optional<Product> updateProduct(Long id, ProductRequestUpdate dto){
         return repository.findById(id)
-                .map(p -> {
-                        p.setValor(dto.getValor());
-                        return repository.save(p);
-                });
+                .map(p -> repository.save(dto.toModel(p)));
     }
 
     public boolean deleteProduct(Long id){
