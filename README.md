@@ -2,6 +2,10 @@
 
 API Java com Spring Boot para estudos
 
+## 📃 MER
+
+![Imagem MER](assets/images/mer.png)
+
 ## 🔧 Instalação
 
 * Limpar e criar a pasta */target*
