@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import com.github.lucaslimb.study_apir.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.github.lucaslimb.study_apir.dto.ProductRequestCreate;
@@ -29,30 +30,27 @@ public class ProductService {
     }
 
     public Optional<Product> getProductById(Long id){
-//        return products.stream()
-//                    .filter(p -> p.getId().equals(id))
-//                    .findFirst();
-        return null;
-    }
-
-    public Optional<Product> updateProduct(Long id, ProductRequestUpdate dto){
-//        return products.stream()
-//                    .filter(p -> p.getId().equals(id))
-//                    .findFirst()
-//                    .map(p -> {
-//                        p.setValor(dto.getValor());
-//                        return p;
-//                    });
-        return null;
-    }
-
-    public boolean deleteProduct(Long id){
-//        return products.removeIf(p -> p.getId().equals(id));
-        return false;
+        return repository.findById(id);
     }
 
     public List<Product> getAll(){
-        return null;
+        return repository.findAll();
+    }
+
+    public Optional<Product> updateProduct(Long id, ProductRequestUpdate dto){
+        Product product = new Product();
+        product.setId(id);
+        product.setValor(dto.getValor());
+        return null; //repository.save(product);
+    }
+
+    public boolean deleteProduct(Long id){
+        Optional<Product> optional = repository.findById(id);
+        if(optional.isPresent()) {
+            repository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
 }
