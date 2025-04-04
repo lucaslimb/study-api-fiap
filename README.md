@@ -8,43 +8,46 @@ API Java com Spring Boot para estudos
 
 ## 🔧 Instalação
 
-* Limpar e criar a pasta */target*
-
-```
-mvn clean package
-```
-
-* Configuração do Swagger
-
-    - https://springdoc.org/properties.html
-
-- application.properties
-
-```
-springdoc.swagger-ui.path=/
-springdoc.swagger-ui.disable-swagger-default-url=true
-```
-
+* Clonar o repositório
+  ```
+  git clone https://github.com/lucaslimb/study-api-fiap.git
+  ```
+   
+* Iniciar o banco de dados
+  ```
+  docker run -d \
+    --name mysql \
+    --rm \
+    -e MYSQL_ROOT_PASSWORD=root_pwd \
+    -e MYSQL_USER=new_user \
+    -e MYSQL_PASSWORD=my_pwd \
+    -p 3306:3306 \
+    mysql
+  ```
 
 ## 🌐 Navegação
-
-### Executar a API
-
--  *Executando* **Maven**
+-  Executar com **Maven**
 
 ```
 mvn spring-boot:run
 ```
 
 ## 📖 Documentação da API (Swagger)
-- http://localhost:8080/swagger-ui.html
+- http://localhost:9000/
 
-
-## 📓 Referencias
+## 📓 Referências
 
 - https://springdoc.org/
 
 ## 📚 Descrição de Branches
-|**main**       |**uc-http-codes**  | **uc-service-crud** | **database-products**      
-|----------------|---------|--------|----------------------------|
-|Código completo até o momento	     |Início do conteúdo (código base)| CRUD completo | Conexão com banco de dados |
+ *Para registro dos conteúdos*
+
+| Branch             | Descrição                                      |
+|--------------------|-----------------------------------------------|
+| **main**           | Código completo até o momento                |
+
+| Branches Read Only | Descrição                                      |
+|--------------------|-----------------------------------------------|
+| **uc-http-codes**  | Http Methods                          |
+| **uc-service-crud**| Http Methods + Service + Errors                                |
+| **database-products**| Http Methods + Service + Errors + Database                  |
