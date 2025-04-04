@@ -38,15 +38,15 @@ public class ProductService {
     }
 
     public Optional<Product> updateProduct(Long id, ProductRequestUpdate dto){
-        Product product = new Product();
-        product.setId(id);
-        product.setValor(dto.getValor());
-        return null; //repository.save(product);
+        return repository.findById(id)
+                .map(p -> {
+                        p.setValor(dto.getValor());
+                        return repository.save(p);
+                });
     }
 
     public boolean deleteProduct(Long id){
-        Optional<Product> optional = repository.findById(id);
-        if(optional.isPresent()) {
+        if(repository.existsById(id)) {
             repository.deleteById(id);
             return true;
         }
