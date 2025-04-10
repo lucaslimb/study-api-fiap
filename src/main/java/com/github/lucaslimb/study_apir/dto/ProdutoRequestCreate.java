@@ -1,19 +1,19 @@
 package com.github.lucaslimb.study_apir.dto;
 
-import com.github.lucaslimb.study_apir.model.Product;
+import com.github.lucaslimb.study_apir.model.Produto;
 
 import java.math.BigDecimal;
 
-public class ProductRequestCreate {
+public class ProdutoRequestCreate {
 
     private String nome;
 
-    public Product toModel(){
+    public Produto toModel(){
         BigDecimal VALOR_PADRAO = new BigDecimal(500);
-        Product product = new Product();
-        product.setNome(this.nome);
-        product.setValor(VALOR_PADRAO);
-        return product;
+        Produto produto = new Produto();
+        produto.setNome(this.nome);
+        produto.setValor(VALOR_PADRAO);
+        return produto;
     }
 
     public String getNome() {

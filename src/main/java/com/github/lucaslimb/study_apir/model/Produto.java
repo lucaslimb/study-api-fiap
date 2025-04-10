@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import java.math.BigDecimal;
 
 @Entity
-public class Product {
+public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

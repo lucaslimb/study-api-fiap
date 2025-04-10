@@ -4,7 +4,7 @@ title MER -
 
 skinparam linetype ortho
 
-entity "product" as product {
+entity "produto" as produto {
   *id : number <<generated>>
   --
   *nome : text
@@ -27,7 +27,7 @@ entity "itens" as itens {
 
 }
 
-product ||--o{ itens
+produto ||--o{ itens
 pedido ||--o{ itens
 
 @enduml

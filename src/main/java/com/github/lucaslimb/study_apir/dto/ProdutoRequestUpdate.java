@@ -1,10 +1,10 @@
 package com.github.lucaslimb.study_apir.dto;
 
-import com.github.lucaslimb.study_apir.model.Product;
+import com.github.lucaslimb.study_apir.model.Produto;
 
 import java.math.BigDecimal;
 
-public class ProductRequestUpdate {
+public class ProdutoRequestUpdate {
 
     private BigDecimal valor;
 
@@ -16,8 +16,8 @@ public class ProductRequestUpdate {
         this.valor = valor;
     }
 
-    public Product toModel(Product product){
-        product.setValor(this.valor);
-        return product;
+    public Produto toModel(Produto produto){
+        produto.setValor(this.valor);
+        return produto;
     }
 }

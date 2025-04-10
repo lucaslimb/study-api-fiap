@@ -2,7 +2,6 @@ package com.github.lucaslimb.study_apir.controller;
 
 import com.github.lucaslimb.study_apir.dto.*;
 import com.github.lucaslimb.study_apir.service.PedidoService;
-import com.github.lucaslimb.study_apir.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

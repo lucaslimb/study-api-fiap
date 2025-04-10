@@ -1,19 +1,19 @@
 package com.github.lucaslimb.study_apir.dto;
 
-import com.github.lucaslimb.study_apir.model.Product;
+import com.github.lucaslimb.study_apir.model.Produto;
 
 import java.math.BigDecimal;
 
-public class ProductResponse {
+public class ProdutoResponse {
 
     private Long id;
     private String nome;
     private BigDecimal valor;
 
-    public ProductResponse toDto(Product product){
-        this.setId(product.getId());
-        this.setNome(product.getNome());
-        this.setValor(product.getValor());
+    public ProdutoResponse toDto(Produto produto){
+        this.setId(produto.getId());
+        this.setNome(produto.getNome());
+        this.setValor(produto.getValor());
         return this;
     }
 

@@ -2,7 +2,7 @@ package com.github.lucaslimb.study_apir.controller;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import com.github.lucaslimb.study_apir.dto.ProductResponse;
+import com.github.lucaslimb.study_apir.dto.ProdutoResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,30 +13,29 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.github.lucaslimb.study_apir.dto.ProductRequestCreate;
-import com.github.lucaslimb.study_apir.dto.ProductRequestUpdate;
-import com.github.lucaslimb.study_apir.model.Product;
-import com.github.lucaslimb.study_apir.service.ProductService;
+import com.github.lucaslimb.study_apir.dto.ProdutoRequestCreate;
+import com.github.lucaslimb.study_apir.dto.ProdutoRequestUpdate;
+import com.github.lucaslimb.study_apir.service.ProdutoService;
 
 @RestController
 @RequestMapping("produtos")
-public class ControllerProduct {
+public class ControllerProduto {
 
     @Autowired
-    private ProductService productService;
+    private ProdutoService produtoService;
 
     @PostMapping
-    public ResponseEntity<ProductResponse> create(@RequestBody ProductRequestCreate dto) {
+    public ResponseEntity<ProdutoResponse> create(@RequestBody ProdutoRequestCreate dto) {
         return ResponseEntity.status(201).body(
-                new ProductResponse().toDto(
-                        productService.createProduct(dto)
+                new ProdutoResponse().toDto(
+                        produtoService.createProduto(dto)
                 )
         );
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
-        boolean result = productService.deleteProduct(id);
+        boolean result = produtoService.deleteProduto(id);
 
         if(result){
             return ResponseEntity.noContent().build();
@@ -46,26 +45,26 @@ public class ControllerProduct {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ProductResponse> update(@PathVariable Long id, @RequestBody ProductRequestUpdate dto) {
-        return productService.updateProduct(id, dto)
-            .map(p -> new ProductResponse().toDto(p))
+    public ResponseEntity<ProdutoResponse> update(@PathVariable Long id, @RequestBody ProdutoRequestUpdate dto) {
+        return produtoService.updateProduto(id, dto)
+            .map(p -> new ProdutoResponse().toDto(p))
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ProductResponse> findById(@PathVariable Long id) {
-        return productService.getProductById(id)
-                .map(p -> new ProductResponse().toDto(p))
+    public ResponseEntity<ProdutoResponse> findById(@PathVariable Long id) {
+        return produtoService.getProdutoById(id)
+                .map(p -> new ProdutoResponse().toDto(p))
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @GetMapping
-    public ResponseEntity<List<ProductResponse>> findAll() {
-        List<ProductResponse> response =
-                productService.getAll().stream()
-                .map(p -> new ProductResponse().toDto(p))
+    public ResponseEntity<List<ProdutoResponse>> findAll() {
+        List<ProdutoResponse> response =
+                produtoService.getAll().stream()
+                .map(p -> new ProdutoResponse().toDto(p))
                 .collect(Collectors.toList());
         return ResponseEntity.ok(response);
     }

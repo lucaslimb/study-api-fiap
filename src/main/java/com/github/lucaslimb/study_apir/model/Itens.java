@@ -21,7 +21,7 @@ public class Itens {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(insertable=false, updatable=false)
-    private Product product;
+    private Produto produto;
 
     public Long getId() {
         return id;
