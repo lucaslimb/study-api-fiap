@@ -1,4 +1,4 @@
-package com.github.lucaslimb.study_api_fiap.dto;
+package com.github.lucaslimb.study_api_fiap.dto.produto;
 
 import com.github.lucaslimb.study_api_fiap.model.Produto;
 

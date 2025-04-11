@@ -1,7 +1,7 @@
 package com.github.lucaslimb.study_api_fiap.service;
 
-import com.github.lucaslimb.study_api_fiap.dto.PedidoRequestCreate;
-import com.github.lucaslimb.study_api_fiap.dto.PedidoRequestUpdate;
+import com.github.lucaslimb.study_api_fiap.dto.pedido.PedidoRequestCreate;
+import com.github.lucaslimb.study_api_fiap.dto.pedido.PedidoRequestUpdate;
 import com.github.lucaslimb.study_api_fiap.model.Pedido;
 import com.github.lucaslimb.study_api_fiap.repository.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +16,9 @@ public class PedidoService {
     @Autowired
     private PedidoRepository repository;
 
-    public Pedido createPedido(PedidoRequestCreate dto){
-        return repository.save(dto.toModel());
-    }
+//    public Pedido createPedido(PedidoRequestCreate dto){
+//        return repository.save(dto.toModel());
+//    }
 
     public Optional<Pedido> getPedidoById(Long id){
         return repository.findById(id);

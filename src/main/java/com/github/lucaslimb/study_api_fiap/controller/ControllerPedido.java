@@ -1,6 +1,8 @@
 package com.github.lucaslimb.study_api_fiap.controller;
 
-import com.github.lucaslimb.study_api_fiap.dto.*;
+import com.github.lucaslimb.study_api_fiap.dto.pedido.PedidoRequestCreate;
+import com.github.lucaslimb.study_api_fiap.dto.pedido.PedidoRequestUpdate;
+import com.github.lucaslimb.study_api_fiap.dto.pedido.PedidoResponse;
 import com.github.lucaslimb.study_api_fiap.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -16,14 +18,14 @@ public class ControllerPedido {
     @Autowired
     private PedidoService pedidoService;
 
-    @PostMapping
-    public ResponseEntity<PedidoResponse> create(@RequestBody PedidoRequestCreate dto) {
-        return ResponseEntity.status(201).body(
-                new PedidoResponse().toDto(
-                        pedidoService.createPedido(dto)
-                )
-        );
-    }
+//    @PostMapping
+//    public ResponseEntity<PedidoResponse> create(@RequestBody PedidoRequestCreate dto) {
+//        return ResponseEntity.status(201).body(
+//                new PedidoResponse().toDto(
+//                        pedidoService.createPedido(dto)
+//                )
+//        );
+//    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {

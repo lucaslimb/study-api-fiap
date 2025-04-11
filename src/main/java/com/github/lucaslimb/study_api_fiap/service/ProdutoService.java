@@ -1,7 +1,7 @@
 package com.github.lucaslimb.study_api_fiap.service;
 
-import com.github.lucaslimb.study_api_fiap.dto.ProdutoRequestCreate;
-import com.github.lucaslimb.study_api_fiap.dto.ProdutoRequestUpdate;
+import com.github.lucaslimb.study_api_fiap.dto.produto.ProdutoRequestCreate;
+import com.github.lucaslimb.study_api_fiap.dto.produto.ProdutoRequestUpdate;
 import com.github.lucaslimb.study_api_fiap.model.Produto;
 import com.github.lucaslimb.study_api_fiap.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
