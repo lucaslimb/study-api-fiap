@@ -8,10 +8,10 @@
 		<version>3.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.github.acnaweb</groupId>
-	<artifactId>study-apir</artifactId>
+	<groupId>com.github.lucaslimb</groupId>
+	<artifactId>study-api-fiap</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>study-apir</name>
+	<name>study-api-fiap</name>
 	<description>API de estudos</description>
 	<url/>
 	<licenses>
