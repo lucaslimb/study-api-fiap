@@ -1,8 +1,8 @@
-package com.github.lucaslimb.study_apir_fiap.controller;
+package com.github.lucaslimb.study_api_fiap.controller;
 
 import java.util.List;
 import java.util.stream.Collectors;
-import com.github.lucaslimb.study_apir_fiap.dto.ProdutoResponse;
+import com.github.lucaslimb.study_api_fiap.dto.ProdutoResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.github.lucaslimb.study_apir_fiap.dto.ProdutoRequestCreate;
-import com.github.lucaslimb.study_apir_fiap.dto.ProdutoRequestUpdate;
-import com.github.lucaslimb.study_apir_fiap.service.ProdutoService;
+import com.github.lucaslimb.study_api_fiap.dto.ProdutoRequestCreate;
+import com.github.lucaslimb.study_api_fiap.dto.ProdutoRequestUpdate;
+import com.github.lucaslimb.study_api_fiap.service.ProdutoService;
 
 @RestController
 @RequestMapping("produtos")

@@ -1,4 +1,4 @@
-package com.github.lucaslimb.study_apir_fiap.model;
+package com.github.lucaslimb.study_api_fiap.model;
 
 import jakarta.persistence.*;
 import java.util.List;

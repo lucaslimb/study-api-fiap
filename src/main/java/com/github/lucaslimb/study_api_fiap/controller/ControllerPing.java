@@ -1,4 +1,4 @@
-package com.github.lucaslimb.study_apir_fiap.controller;
+package com.github.lucaslimb.study_api_fiap.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

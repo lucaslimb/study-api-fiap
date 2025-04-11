@@ -1,6 +1,6 @@
-package com.github.lucaslimb.study_apir_fiap.dto;
+package com.github.lucaslimb.study_api_fiap.dto;
 
-import com.github.lucaslimb.study_apir_fiap.model.Produto;
+import com.github.lucaslimb.study_api_fiap.model.Produto;
 
 import java.math.BigDecimal;
 
