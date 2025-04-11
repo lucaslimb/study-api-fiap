@@ -9,18 +9,13 @@ public class Itens {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    private Long pedido_id;
-    private Long produto_id;
     private int quantidade;
     private BigDecimal valor;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(insertable=false, updatable=false)
+    @ManyToOne
     private Pedido pedido;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(insertable=false, updatable=false)
+    @ManyToOne
     private Produto produto;
 
     public Long getId() {
@@ -31,20 +26,20 @@ public class Itens {
         this.id = id;
     }
 
-    public Long getPedido_id() {
-        return pedido_id;
+    public Pedido getPedido() {
+        return pedido;
     }
 
-    public void setPedido_id(Long pedido_id) {
-        this.pedido_id = pedido_id;
+    public void setPedido(Pedido pedido) {
+        this.pedido = pedido;
     }
 
-    public Long getProduto_id() {
-        return produto_id;
+    public Produto getProduto() {
+        return produto;
     }
 
-    public void setProduto_id(Long produto_id) {
-        this.produto_id = produto_id;
+    public void setProduto(Produto produto) {
+        this.produto = produto;
     }
 
     public int getQuantidade() {

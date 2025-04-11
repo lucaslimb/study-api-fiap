@@ -13,9 +13,7 @@ public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String nome;
-
     private BigDecimal valor;
     
     public BigDecimal getValor() {
