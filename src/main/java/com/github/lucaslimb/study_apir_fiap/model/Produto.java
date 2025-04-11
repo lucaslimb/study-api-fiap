@@ -1,4 +1,4 @@
-package com.github.lucaslimb.study_apir.model;
+package com.github.lucaslimb.study_apir_fiap.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

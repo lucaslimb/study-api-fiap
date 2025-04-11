@@ -1,9 +1,9 @@
-package com.github.lucaslimb.study_apir.service;
+package com.github.lucaslimb.study_apir_fiap.service;
 
-import com.github.lucaslimb.study_apir.dto.PedidoRequestCreate;
-import com.github.lucaslimb.study_apir.dto.PedidoRequestUpdate;
-import com.github.lucaslimb.study_apir.model.Pedido;
-import com.github.lucaslimb.study_apir.repository.PedidoRepository;
+import com.github.lucaslimb.study_apir_fiap.dto.PedidoRequestCreate;
+import com.github.lucaslimb.study_apir_fiap.dto.PedidoRequestUpdate;
+import com.github.lucaslimb.study_apir_fiap.model.Pedido;
+import com.github.lucaslimb.study_apir_fiap.repository.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

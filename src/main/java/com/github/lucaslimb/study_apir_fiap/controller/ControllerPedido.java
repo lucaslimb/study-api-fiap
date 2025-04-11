@@ -1,7 +1,7 @@
-package com.github.lucaslimb.study_apir.controller;
+package com.github.lucaslimb.study_apir_fiap.controller;
 
-import com.github.lucaslimb.study_apir.dto.*;
-import com.github.lucaslimb.study_apir.service.PedidoService;
+import com.github.lucaslimb.study_apir_fiap.dto.*;
+import com.github.lucaslimb.study_apir_fiap.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

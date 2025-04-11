@@ -1,6 +1,6 @@
-package com.github.lucaslimb.study_apir.dto;
+package com.github.lucaslimb.study_apir_fiap.dto;
 
-import com.github.lucaslimb.study_apir.model.Pedido;
+import com.github.lucaslimb.study_apir_fiap.model.Pedido;
 
 public class PedidoRequestUpdate {
 

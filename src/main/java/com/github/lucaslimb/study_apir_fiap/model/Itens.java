@@ -1,4 +1,4 @@
-package com.github.lucaslimb.study_apir.model;
+package com.github.lucaslimb.study_apir_fiap.model;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
@@ -9,7 +9,7 @@ public class Itens {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private int quantidade;
+    private BigDecimal quantidade;
     private BigDecimal valor;
 
     @ManyToOne
@@ -42,11 +42,11 @@ public class Itens {
         this.produto = produto;
     }
 
-    public int getQuantidade() {
+    public BigDecimal getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(int quantidade) {
+    public void setQuantidade(BigDecimal quantidade) {
         this.quantidade = quantidade;
     }
 

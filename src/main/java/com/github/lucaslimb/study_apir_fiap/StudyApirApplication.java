@@ -1,4 +1,4 @@
-package com.github.lucaslimb.study_apir;
+package com.github.lucaslimb.study_apir_fiap;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
