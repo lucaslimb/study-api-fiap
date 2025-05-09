@@ -9,7 +9,7 @@ public class ProdutoRequestCreate {
     private String nome;
 
     public Produto toModel(){
-        BigDecimal VALOR_PADRAO = new BigDecimal(500);
+        BigDecimal VALOR_PADRAO = new BigDecimal(8999);
         Produto produto = new Produto();
         produto.setNome(this.nome);
         produto.setValor(VALOR_PADRAO);

@@ -31,10 +31,13 @@ public class PedidoService {
                 .map(i -> {
                     Itens item = new Itens();
                     Produto produto = produtoRepository
-                            .findById(i.getProduto_id()).orElseThrow();
+                            .findById(i.getProduto_id())
+                            .orElseThrow(() ->
+                                    new RuntimeException(
+                                            "Produto inexistente: " + i.getProduto_id()));
                     item.setProduto(produto);
-                    item.setValor((produto.getValor()).multiply(i.getQuantidade()));
                     item.setQuantidade(i.getQuantidade());
+                    item.setValor((produto.getValor()).multiply(i.getQuantidade()));
                     item.setPedido(pedido);
                     return item;
                 }).collect(Collectors.toList());
