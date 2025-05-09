@@ -5,7 +5,6 @@ import java.math.BigDecimal;
 public class ItensRequestCreate {
 
     private Long produto_id;
-    private BigDecimal valor;
     private BigDecimal quantidade;
 
     public Long getProduto_id() {
@@ -16,13 +15,6 @@ public class ItensRequestCreate {
         this.produto_id = produto_id;
     }
 
-    public BigDecimal getValor() {
-        return valor;
-    }
-
-    public void setValor(BigDecimal valor) {
-        this.valor = valor;
-    }
 
     public BigDecimal getQuantidade() {
         return quantidade;

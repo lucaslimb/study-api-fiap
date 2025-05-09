@@ -1,6 +1,9 @@
 package com.github.lucaslimb.study_api_fiap.model;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 import java.math.BigDecimal;
 
 @Entity
@@ -13,9 +16,13 @@ public class Itens {
     private BigDecimal valor;
 
     @ManyToOne
+    @Cascade(value = CascadeType.ALL)
+    @JoinColumn(name = "pedido_id")
     private Pedido pedido;
 
     @ManyToOne
+    @Cascade(value = CascadeType.ALL)
+    @JoinColumn(name = "produto_id")
     private Produto produto;
 
     public Long getId() {

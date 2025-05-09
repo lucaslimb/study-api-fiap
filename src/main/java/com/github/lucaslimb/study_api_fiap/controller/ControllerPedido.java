@@ -18,14 +18,14 @@ public class ControllerPedido {
     @Autowired
     private PedidoService pedidoService;
 
-//    @PostMapping
-//    public ResponseEntity<PedidoResponse> create(@RequestBody PedidoRequestCreate dto) {
-//        return ResponseEntity.status(201).body(
-//                new PedidoResponse().toDto(
-//                        pedidoService.createPedido(dto)
-//                )
-//        );
-//    }
+    @PostMapping
+    public ResponseEntity<PedidoResponse> create(@RequestBody PedidoRequestCreate dto) {
+        return ResponseEntity.status(201).body(
+                new PedidoResponse().toDto(
+                        pedidoService.createPedido(dto)
+                )
+        );
+    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
