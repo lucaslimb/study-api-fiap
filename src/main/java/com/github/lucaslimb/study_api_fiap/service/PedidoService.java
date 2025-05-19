@@ -4,6 +4,7 @@ import com.github.lucaslimb.study_api_fiap.dto.pedido.PedidoRequestCreate;
 import com.github.lucaslimb.study_api_fiap.dto.pedido.PedidoRequestUpdate;
 import com.github.lucaslimb.study_api_fiap.model.Itens;
 import com.github.lucaslimb.study_api_fiap.model.Pedido;
+import com.github.lucaslimb.study_api_fiap.model.PedidoStatus;
 import com.github.lucaslimb.study_api_fiap.model.Produto;
 import com.github.lucaslimb.study_api_fiap.repository.PedidoRepository;
 import com.github.lucaslimb.study_api_fiap.repository.ProdutoRepository;
@@ -26,7 +27,9 @@ public class PedidoService {
 
     public Pedido createPedido(PedidoRequestCreate dto){
         Pedido pedido = new Pedido();
-        pedido.setStatus("ABERTO");
+        pedido.setStatus(PedidoStatus.ABERTO);
+        pedido.setDataEntrega(dto.getDataEntrega());
+        pedido.setDataPedido(dto.getDataPedido());
         List<Itens> itens = dto.getItens().stream()
                 .map(i -> {
                     Itens item = new Itens();
@@ -64,6 +67,10 @@ public class PedidoService {
             return true;
         }
         return false;
+    }
+
+    public List<Pedido> findByStatus(PedidoStatus status) {
+        return pedidoRepository.findByStatus(status);
     }
 
 }

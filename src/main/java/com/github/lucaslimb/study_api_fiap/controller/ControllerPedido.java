@@ -3,6 +3,7 @@ package com.github.lucaslimb.study_api_fiap.controller;
 import com.github.lucaslimb.study_api_fiap.dto.pedido.PedidoRequestCreate;
 import com.github.lucaslimb.study_api_fiap.dto.pedido.PedidoRequestUpdate;
 import com.github.lucaslimb.study_api_fiap.dto.pedido.PedidoResponse;
+import com.github.lucaslimb.study_api_fiap.model.PedidoStatus;
 import com.github.lucaslimb.study_api_fiap.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -61,6 +62,14 @@ public class ControllerPedido {
                         .map(p -> new PedidoResponse().toDto(p))
                         .collect(Collectors.toList());
         return ResponseEntity.ok(response);
+    }
+
+    // Query Parameter /pedidos/query?status=CANCELADO
+    @GetMapping("query")
+    public ResponseEntity<List<PedidoResponse>> findByValue(PedidoStatus status){
+        return ResponseEntity.ok(pedidoService.findByStatus(status).stream()
+                .map(pedido -> new PedidoResponse().toDto(pedido))
+                .collect(Collectors.toList()));
     }
 
 }
