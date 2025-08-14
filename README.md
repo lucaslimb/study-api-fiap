@@ -25,6 +25,12 @@ API Java com Spring Boot para estudos
     mysql
   ```
 
+## Variáveis de ambiente
+````.env
+export $(cat .env | xargs)
+
+````
+
 ## 🌐 Navegação
 -  Executar com **Maven**
 
