@@ -26,7 +26,7 @@ API Java com Spring Boot para estudos
   ```
 
 ## Variáveis de ambiente
-````.env
+````bash
 export $(cat .env | xargs)
 
 ````
@@ -35,7 +35,7 @@ export $(cat .env | xargs)
 -  Executar com **Maven**
 
 ```
-mvn spring-boot:run
+mvn spring-boot:run -Dspring-boot.run.profiles=dev
 ```
 
 ## 📖 Documentação da API (Swagger)
