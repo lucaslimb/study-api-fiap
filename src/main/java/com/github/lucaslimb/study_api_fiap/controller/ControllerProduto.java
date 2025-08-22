@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import com.github.lucaslimb.study_api_fiap.dto.produto.ProdutoResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,11 +19,20 @@ import com.github.lucaslimb.study_api_fiap.dto.produto.ProdutoRequestUpdate;
 import com.github.lucaslimb.study_api_fiap.service.ProdutoService;
 
 @RestController
-@RequestMapping("produtos")
+@RequestMapping("/api/${api.version}/produtos")
 public class ControllerProduto {
 
     @Autowired
     private ProdutoService produtoService;
+
+
+    @Value("${api.version}")
+    private String version;
+
+    @GetMapping("/info")
+    public String info() {
+        return "Versão atual: " + version;
+    }
 
     @PostMapping
     public ResponseEntity<ProdutoResponse> create(@RequestBody ProdutoRequestCreate dto) {
