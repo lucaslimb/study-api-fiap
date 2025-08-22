@@ -28,6 +28,12 @@ API Java com Spring Boot para estudos
 ## Variáveis de ambiente
 ````bash
 export $(cat .env | xargs)
+---
+export DB_USER=root
+export DB_PASSWORD=root_pwd
+export DB_SERVER=localhost
+export DB_PORT=3306
+export DB_DATABASE=devdv
 
 ````
 
