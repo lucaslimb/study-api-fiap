@@ -36,6 +36,16 @@ export DB_PORT=3306
 export DB_DATABASE=devdv
 
 ````
+## *Instruções* **Docker Compose**
+
+  -  https://devhints.io/docker-compose
+  - Docker image: https://hub.docker.com/repository/docker/lucaslimb/study-api-fiap/general
+
+```
+docker compose up
+docker compose up db
+docker compose stop
+```
 
 ## 🌐 Navegação
 -  Executar com **Maven**
