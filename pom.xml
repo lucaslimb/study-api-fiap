@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.github.lucaslimb</groupId>
 	<artifactId>study-api-fiap</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>study-api-fiap</name>
 	<description>API de estudos</description>
 	<url/>
